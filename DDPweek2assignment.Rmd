@@ -1,0 +1,45 @@
+# Developing Data Products Week 2 Assignment
+### By Ivo Alabe
+### October 6, 2020
+
+# 1. Instructions
+
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on GitHub Pages.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! 
+
+# 2. Review Criteria
+
+The rubric contains the following two questions:
+
+- Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+- Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+# 3. Web Page with Leaflet
+
+I`m from Bolivia. Here you have a map from Bolivia, South America.
+
+````{r}
+library(leaflet)
+library(dplyr)
+
+my_map <- leaflet() %>%
+addTiles() %>%
+        setView(lng=-63.5886, lat=-16.2901, zoom = 4)
+my_map
+
+````
+Here you have a map from the "Cristo de la Concordia", the most famous place to visit in Cochabamba.  You can find information about it in the link.
+
+````{r}
+ccc <- c("<a href= 'https://es.wikipedia.org/wiki/Cristo_de_la_Concordia'>Cristo de la Concordia</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=-17.3846, lng=-66.1345, popup = ccc)
+ 
+           
+````
+
+Thank you!
